@@ -11,19 +11,30 @@ input[type="checkbox"]:invalid + label::before {
   border-color: #f33;
 }
 
-error-message {
+.is-validated input:invalid,
+.is-validated input[type="checkbox"]:invalid + label::before {
+  border-color: #f33;
+}
+
+.error-message {
   display: none;
   background-color: #fee;
   color: #c33;
 }
 
-error-message-highlighted {
+.error-message-highlighted {
   background-color: #c33;
   color: #fff;
 }
 
-error-message:firstchild,
+.is-validated > .error-message:first-child,
+.is-validated input:invalid + .error-message.
+.is-validated input:invalid + label + .error-message {
+  display: block;
+}
+
+.error-message:first-child,
 input:invalid + .error-message,
-input:invalid + label + ,error-message {
+input:invalid + label + .error-message {
   display: block;
 }
